@@ -73,3 +73,23 @@
     font-family: var(--ff-inconsolata);
     font-weight: normal;
 }
+
+nav {
+    border: 1px solid #D5402C;
+    transform: rotate(90deg);
+}
+nav ul {
+    display: flex;
+}
+li::marker {
+    list-style: none;
+    font-size: 0px; 
+}
+/* Profile */
+.profile {
+    display: flex;
+    width: 100%;
+}
+.profile-info {
+    width: 100%;
+}
