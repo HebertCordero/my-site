@@ -10,32 +10,76 @@
     <link rel="icon" type="image/png" href="./assets/favicon-32x32.png" sizes="32x32">
     <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./assets/apple-touch-icon.png">
+    <script src="./js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/index.js"></script>
+    <!-- Slick -->
+    <script src="./js/slick.min.js"></script>
+    <link rel="stylesheet" href="./css/slick.css">
 </head>
 
 <body>
-    <section class="profile">
-        <nav>
-            <ul>
-                <li>
-                    <a href="projects">Projects</a>
-                </li>
-                <li>
-                    <a href="experience">Experience</a>
-                </li>
-                <li>
-                    <a href="about">About</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="profile-info">
-            <h1>Hebert Cordero</h1>
-            <img class="profile-info__img" src="./assets/Profile.png">
-            <h2>Web Coordinator</h2>
-            <p>@Innovasport</p>
-        </div>
-    </section>
+    <main>
+        <section class="profile">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="experience">Experience</a>
+                    </li>
+                    <li>
+                        <a href="about">About</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="profile-info">
+                <header class="profile-title">
+                    <h1>Hebert Cordero</h1>
+                </header>
+                <img class="profile-info__img" src="./assets/Profile.png">
+                <h2>Web Coordinator</h2>
+                <p>@Innovasport</p>
+            </div>
+        </section>
+        <section class="intro">
+            <p>Hi, I’m Hebert a Web Developer with a strong passion for creating websites and optimizing their content, currently, my focus is on UX/UI, and specialize in eCommerce websites. <br><br> I believe that learning is a never-ending journey,  I love to reading articles/books to stay updated with the latest trends. I’m constantly striving to improve my skills and take on new challenges.</p>
+        </section>
+        <section class="projects">
+            <div class="projects-carousel">
+                <article class="projects-carousel__project">
+                    <figure>
+                        <img src="./assets/p-project1-pdp.png" alt="Project 1">
+                    </figure>
+                    <div>
+                        <h2 class="projects-carousel__title">Running Shoes</h2>
+                        <p class="projects-carousel__info">A responsive product showcase component that takes advantage of CSS animations and transitions in order to provide a more dynamic experience as the user changes the product model.</p>
+                        <a href="#" class="projects-carousel__button">View ></a>
+                    </div>
+                </article>
+                <article class="projects-carousel__project">
+                    <figure>
+                        <img src="./assets/p-project1-pdp.png" alt="Project 1">
+                    </figure>
+                    <div>
+                        <h2 class="projects-carousel__title">Running Shoes</h2>
+                        <p class="projects-carousel__info">A responsive product showcase component that takes advantage of CSS animations and transitions in order to provide a more dynamic experience as the user changes the product model.</p>
+                        <a href="#" class="projects-carousel__button">View ></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer>
+            <p>Copyright © 2023. All rights reserved.</p>
+        </footer>
+    </main>
 </body>
-
+<script>
+    $('.projects-carousel').slick({
+        dots: true,
+        prevArrow: "<button><</button>",
+        nextArrow: "<button>></button>"
+    });
+</script>
 </html>

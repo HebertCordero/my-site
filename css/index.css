@@ -57,7 +57,7 @@
     --fs-18: 18px;
     --fs-16: 16px;
     --fs-14: 14px;
-    --fs-14: 12px;
+    --fs-12: 12px;
     --fs-10: 10px;
     --DarkSide: #0A0908;
     --PaperWhite: #EDE6DC;
@@ -72,33 +72,61 @@
     padding: 0;
     font-family: var(--ff-inconsolata);
     font-weight: normal;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 body {
     background-color: var(--PaperWhite);
 }
+a {
+    color: var(--DarkSide);
+}
+h1 {
+    font-size: var(--fs-24);
+}
 
 nav {
     border: 1px solid #D5402C;
+    border-top: none;
+    border-bottom: none;
 }
 nav ul {
     height: 100%;
+    width: 45px;
     display: flex;
     flex-direction: column;
-    place-content: center;
+    place-content: space-evenly;
+    align-items: center;
 }
 li::marker {
     list-style: none;
     font-size: 0px; 
 }
-/* Profile */
+/* ---- Profile ---- */
 .profile {
-    display: flex;
     width: 100%;
+    display: flex;
+    border-bottom: 1px solid #D5402C;
 }
 .profile-info {
+    padding: 25px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile nav ul li {
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #D5402C;
+}
+.profile nav ul li:first-child {
+    border-top: unset;
 }
 .profile nav ul li a {
     display: block;
@@ -107,7 +135,22 @@ li::marker {
     transform: rotate(180deg);
     text-align: center;
     margin: 10px 0;
+    font-size: var(--fs-14);
 }
 .profile-info__img {
-    
+    width: 130px;
+    height: auto;
+    margin: 20px 0;
 }
+.profile-info h2,
+.profile-info p {
+    width: 100%;
+}
+/* ---- Intro ---- */
+.intro {
+    padding: 20px;
+}
+.intro p {
+    font-size: var(--fs-14);
+}
+/* ---- Projects ---- */
