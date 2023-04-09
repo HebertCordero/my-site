@@ -73,13 +73,18 @@
     font-family: var(--ff-inconsolata);
     font-weight: normal;
 }
+body {
+    background-color: var(--PaperWhite);
+}
 
 nav {
     border: 1px solid #D5402C;
-    transform: rotate(90deg);
 }
 nav ul {
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    place-content: center;
 }
 li::marker {
     list-style: none;
@@ -91,5 +96,18 @@ li::marker {
     width: 100%;
 }
 .profile-info {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+}
+.profile nav ul li a {
+    display: block;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    text-align: center;
+    margin: 10px 0;
+}
+.profile-info__img {
+    
 }
