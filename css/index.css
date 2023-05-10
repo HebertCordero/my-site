@@ -76,11 +76,20 @@
     letter-spacing: 1px;
     font-weight: 500;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: var(--PaperWhite);
 }
 a {
     color: var(--DarkSide);
+    text-decoration: none;
+}
+.experience-list > li > a {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 h1 {
     font-size: var(--fs-24);
@@ -149,9 +158,9 @@ main {
     font-size: var(--fs-14);
 }
 .profile-info__img {
-    width: 130px;
+    width: 150px;
     height: auto;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .profile-info h2,
 .profile-info p {
@@ -314,7 +323,7 @@ main {
     align-items: center;
     cursor: pointer;
 }
-.experience-list > li > span {
+.experience-list > li span {
     line-height: 15px;
     font-size: var(--fs-12);
     text-decoration: underline;
@@ -422,7 +431,7 @@ footer > p {
     main {
         display: grid; 
         grid-template-columns: 1fr 1fr; 
-        grid-template-rows: 300px 200px 200px auto auto; 
+        grid-template-rows: 315px 200px 200px auto auto; 
         gap: 0px 0px; 
         grid-template-areas: 
           "profile intro"
