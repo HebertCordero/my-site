@@ -415,3 +415,41 @@ footer > p {
         gap: 15px;
     }
 }
+@media (min-width: 1000px) {
+    section {
+        overflow: hidden;
+    }
+    main {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 300px 200px 200px auto auto; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "profile intro"
+          "expertise experience"
+          "skills experience"
+          "projects projects"
+          "footer footer"; 
+        max-width: 900px;
+        margin: 50px auto;
+        border: 1px solid var(--FireRed);
+    }
+    .profile { grid-area: profile; }
+    .intro { grid-area: intro; }
+    .projects { grid-area: projects; padding: 0 0 20px; }
+    .experience { grid-area: experience; border-left: 1px solid #D5402C; }
+    .expertise { grid-area: expertise; }
+    .skills { grid-area: skills; }
+    .footer { grid-area: footer; }
+    
+    .projects-carousel__project {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+    }
+    .projects-carousel .slick-dots {
+        margin-top: 5px;
+    }
+    .projects-carousel__info {
+        height: 100%;
+    }
+}
