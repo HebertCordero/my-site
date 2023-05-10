@@ -66,7 +66,7 @@
     --SnowWhite: #FAFEFF;
     --ff-inconsolata: 'Inconsolata', monospace;
 }
-
+/* ---- General ---- */
 * {
     margin: 0;
     padding: 0;
@@ -85,15 +85,15 @@ a {
 h1 {
     font-size: var(--fs-24);
 }
-
 nav {
     border: 1px solid #D5402C;
     border-top: none;
     border-bottom: none;
+    border-left: unset;
 }
 nav ul {
     height: 100%;
-    width: 45px;
+    width: 35px;
     display: flex;
     flex-direction: column;
     place-content: space-evenly;
@@ -103,11 +103,22 @@ li::marker {
     list-style: none;
     font-size: 0px; 
 }
+section {
+    border-bottom: 1px solid #D5402C;
+}
+section > h2 {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
 /* ---- Profile ---- */
 .profile {
     width: 100%;
     display: flex;
-    border-bottom: 1px solid #D5402C;
 }
 .profile-info {
     padding: 25px;
@@ -148,9 +159,259 @@ li::marker {
 }
 /* ---- Intro ---- */
 .intro {
-    padding: 20px;
+    padding: 0px 20px 20px;
 }
 .intro p {
     font-size: var(--fs-14);
 }
 /* ---- Projects ---- */
+.projects {
+    padding: 0 0 25px;
+}
+.slick-dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+.slick-dots li button {
+    width: 9px;
+    height: 9px;
+    border-radius: 50px;
+    background-color: transparent/*var(--FireRed)*/;
+    border: 1px solid var(--FireRed);
+    font-size: 0;
+}
+.slick-dots li.slick-active button {
+    background-color: var(--FireRed);
+}
+.slick-arrow {
+    display: none;
+}
+.slick-slide picture img {
+    display: block;
+    width: 100%;
+}
+.projects-carousel__project {
+    position: relative;
+}
+.projects-carousel__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 25px 0;
+}
+.projects-carousel__title {
+    font-size: var(--fs-20);
+}
+.projects-carousel__desc {
+    font-size: var(--fs-14);
+    margin-top: 10px;
+}
+.projects-carousel__button {
+    width: 100%;
+    position: relative;
+    text-align: right;
+    margin-top: 5px;
+    font-size: var(--fs-14);
+    color: var(--FireRed);
+}
+/* ---- Slider ---- */
+.scroller {
+    cursor: grab;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: left;
+    position: relative;
+}
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+.scroller-wrapper {
+    display: flex;
+}
+.skills .scroller {
+    padding: 0 20px 20px;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+}
+.skill {
+    display: flex;
+    gap: 15px;
+}
+.skill li{
+    display: flex;
+    width: auto;
+    height: 35px;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-weight: 300;
+    font-size: var(--fs-20);
+    color: var(--SnowWhite);
+    background-color: var(--FireRed);
+    align-items: center;
+    justify-content: center;
+}
+.skill:after {
+    width: 30px;
+    height: 10px;
+    content: 'a';
+    display: flex;
+    color: transparent;
+}
+/* ---- Experience  ---- */
+.experience {
+    padding: 0px 0 12px;
+}
+.experience-carousel {
+    display: flex !important;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 5px;
+}
+.experience-info li::marker {
+    list-style: none;
+    font-size: 10px; 
+    white-space: nowrap;
+}
+.experience-title {
+    font-size: var(--fs-16);
+}
+.experience-site {
+    color: var(--FireRed);
+    text-decoration: underline;
+    font-size: var(--fs-12);
+}
+.experience-dates {
+    color: var(--LeafGreen);
+    font-size: var(--fs-12);
+}
+.experience-info {
+    display: flex;
+    gap: 3px;
+    margin-left: 1em;
+    margin-bottom: 10px;
+    flex-direction: column;
+    color: var(--DarkSide);
+    font-size: var(--fs-14);
+}
+
+/* ---- Expertise  ---- */
+.experience-list {
+    display: grid;
+    column-gap: 8px;
+    grid-template-columns: auto 1fr;
+    padding: 0 20px 20px;
+    max-width: 380px;
+    margin: auto;
+}
+.experience-list > li {
+    height: 35px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+}
+.experience-list > li > span {
+    line-height: 15px;
+    font-size: var(--fs-12);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.expertise-icon {
+    width: 20px;
+}
+
+/* ---- Footer  ---- */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+footer > p {
+    padding: 15px 20px;
+    grid-column: 1/3;
+    border-top: 1px solid var(--FireRed);
+    font-size: var(--fs-10);
+}
+.footer-contact {
+    border-right: 1px solid var(--FireRed);
+}
+.footer-contact > figure {
+    display: flex;
+    padding: 8px 10px;
+    gap: 8px;
+    border-bottom: 1px solid var(--FireRed);
+    align-items: center;
+    justify-content: center;
+}
+.footer-contact > figure > figcaption {
+    font-size: var(--fs-12);
+}
+.footer-contact > p {
+    font-size: var(--fs-12);
+    padding: 8px 10px;
+    text-align: center;
+}
+.badge {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-socials > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    gap: 7px;
+    padding: 10px;
+    align-items: center;
+}
+.social-item > a {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social-item > a > p {
+    font-size: 10px;
+    color: var(--FireRed);
+    text-decoration: underline;
+}
+.social-logo {
+    width: 32px;
+    height: 32px;
+}
+
+@media (min-width:360px) {
+    .experience-list {
+        column-gap: 25px;
+        row-gap: 8px;
+    }
+    .footer-contact > figure > figcaption {
+        font-size: var(--fs-14);
+        font-weight: 400;
+    }
+    .footer-contact > p {
+        font-size: var(--fs-14);
+        font-weight: 400;
+    }
+    .social-item > a > p {
+        font-size: 12px;
+    }
+    footer > p {
+        font-size: var(--fs-12);
+    }
+}
+@media (min-width: 500px) {
+    .footer-socials > ul {
+        gap: 15px;
+    }
+}
